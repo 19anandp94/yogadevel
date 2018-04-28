@@ -16,25 +16,7 @@ get_header(); ?>
 <!--==================== main content section ====================-->
 <main id="content">
   <div class="container">
-    <div class="row">
-      <div class="<?php echo ( !is_active_sidebar( 'sidebar_primary' ) ? '12' :'9' ); ?> col-md-9 col-sm-8">
-          <?php 
-    		  while(have_posts()){ the_post();
-              get_template_part('content','');
-    		  } ?>
-          <div class="col-md-12 text-center">
-      			<?php //Previous / next page navigation
-      			the_posts_pagination( array(
-      			'prev_text'          => __( '<i class="fa fa-arrow-left"></i>', 'yoga' ),
-      			'next_text'          => __( '<i class="fa fa-arrow-right"></i>', 'yoga' ),
-      			) ); ?>
-          </div>
-      </div>
-	    <aside class="col-md-3 col-sm-4">
-        <?php get_sidebar(); ?>
-      </aside>
-    </div>
-	  
+
 <?php get_header(); ?>
 
 <br>
