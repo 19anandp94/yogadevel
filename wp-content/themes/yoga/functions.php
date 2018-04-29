@@ -244,4 +244,9 @@ function theme_enqueue_scripts() {
 
         }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_scripts' );
+
+function custom_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 ?>

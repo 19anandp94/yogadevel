@@ -150,6 +150,11 @@ input[type="radio"] {
           box-sizing: border-box;
   padding: 0;
 }
+.img-fluid{
+  max-width: 300px;
+  height: 223px;
+}
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;

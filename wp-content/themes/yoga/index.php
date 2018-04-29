@@ -16,102 +16,62 @@ get_header(); ?>
 <!--==================== main content section ====================-->
 <main id="content">
   <div class="container">
-
+    
 <?php get_header(); ?>
 
 <br>
-<!--Content-->
-<div class="container">
-    <div class="row">
-        <!--First columnn-->
-        <div class="col-lg-4">
-            <!--Card-->
-            <div class="card wow fadeIn" data-wow-delay="0.2s">
 
-                <!--Card image-->
-                <div class="view overlay hm-white-slight">
-                    <img src="http://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(120).jpg" class="img-fluid" alt="">
-                    <a href="#">
-                        <div class="mask"></div>
-                    </a>
-                </div>
-                <!--/.Card image-->
+<!--Dynamic cards for listing training classes information-->
+<?php 
+$args = array(
+'orderby'          => 'date',
+'order'            => 'ASC',
+'posts_per_page'   => 3,
+'category_name'  => 'yoga-trainings'
+);
 
-                <!--Card content-->
-                <div class="card-block">
-                    <!--Title-->
-                    <h4 class="card-title">Mesmerizing Landscapes</h4>
-                    <!--Text-->
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-info">Read more</a>
-                </div>
-                <!--/.Card content-->
+// The Query
+$query2 = new WP_Query( $args );
 
+if ( $query2->have_posts() ) {
+    // The Loop
+while ( $query2->have_posts() ) {
+    $query2->the_post();
+    ?>
+    <!--Auto generated columnn-->
+    <div class="col-lg-4">
+        <!--Card-->
+        <div class="card wow fadeIn" data-wow-delay="0.2s">
+
+            <!--Card image-->
+            <div class="view overlay hm-white-slight">
+                <img src="<?php echo the_post_thumbnail_url('medium');?>" class="img-fluid" alt="">
+                <a href="<?php echo get_permalink() ?>">
+                    <div class="mask"></div>
+                </a>
             </div>
-            <!--/.Card-->
-        </div>
-        <!--First columnn-->
+            <!--/.Card image-->
 
-        <!--Second columnn-->
-        <div class="col-lg-4">
-            <!--Card-->
-            <div class="card wow fadeIn" data-wow-delay="0.4s">
-
-                <!--Card image-->
-                <div class="view overlay hm-white-slight">
-                    <img src="http://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(123).jpg" class="img-fluid" alt="">
-                    <a href="#">
-                        <div class="mask"></div>
-                    </a>
-                </div>
-                <!--/.Card image-->
-
-                <!--Card content-->
-                <div class="card-block">
-                    <!--Title-->
-                    <h4 class="card-title">Trevelers Toolbox</h4>
-                    <!--Text-->
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-info">Read more</a>
-                </div>
-                <!--/.Card content-->
-
+            <!--Card content-->
+            <div class="card-block">
+                <!--Title-->
+                <h4 class="card-title"><?php  echo get_the_title(); ?></h4>
+                <!--Text-->
+                <p class="card-text"><?php echo get_the_excerpt();?></p>
+                <a href="<?php echo get_permalink() ?>" class="btn btn-outline-primary waves-effect">Read more</a>
             </div>
-            <!--/.Card-->
+            <!--/.Card content-->
+
         </div>
-        <!--Second columnn-->
-
-        <!--Third columnn-->
-        <div class="col-lg-4">
-            <!--Card-->
-            <div class="card wow fadeIn" data-wow-delay="0.6s">
-
-                <!--Card image-->
-                <div class="view overlay hm-white-slight">
-                    <img src="http://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(122).jpg" class="img-fluid" alt="">
-                    <a href="#">
-                        <div class="mask"></div>
-                    </a>
-                </div>
-                <!--/.Card image-->
-
-                <!--Card content-->
-                <div class="card-block">
-                    <!--Title-->
-                    <h4 class="card-title">Mountain Rivers</h4>
-                    <!--Text-->
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-info">Read more</a>
-                </div>
-                <!--/.Card content-->
-
-            </div>
-            <!--/.Card-->
-        </div>
-        <!--Third columnn-->
+        <!--/.Card-->
     </div>
-</div>
-<!--/.Content-->
+    <!--/.Auto generated columnn-->
+    <?php
+}
+wp_reset_postdata();
+} ?>
+<!--/.Dynamic query listing posts from "cards" category-->
+              
 
               
               
