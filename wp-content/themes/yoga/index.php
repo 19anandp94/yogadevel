@@ -21,6 +21,21 @@ get_header(); ?>
 
 <br>
 
+<!--EMBED YOUTUBE VIDEO-->
+ <div class="row">
+        <div class="section-header text-center">
+            <h2>
+                HOW IT WORKS
+            </h2>
+        </div>
+        <!-- 16:9 aspect ratio -->
+        <div class="col-md-6 col-md-offset-3">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/LHLhaKn5gn8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+<br>
 <!--Dynamic cards for listing training classes information-->
 <?php 
 $args = array(
