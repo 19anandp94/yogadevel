@@ -244,4 +244,20 @@ function theme_enqueue_scripts() {
 
         }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_scripts' );
+
+function custom_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+register_post_type( 'foo',
+    array(
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => array(
+            "with_front" => true
+        ),
+        'cptp_permalink_structure' => '%post_id%'
+    )
+);
 ?>
