@@ -6,7 +6,7 @@
  */
 get_header(); ?>
 <!-- Breadcrumb -->
-<div class="yoga-breadcrumb-section" style='background: url("<?php echo esc_url(( has_header_image() ? get_header_image() : get_theme_support( 'custom-header', 'default-image' ) )); ?>") repeat fixed center 0 #143745;'>
+<div class="yoga-breadcrumb-section" id="header" style='background: url("<?php echo esc_url(( has_header_image() ? get_header_image() : get_theme_support( 'custom-header', 'default-image' ) )); ?>") repeat fixed center 0 #143745;'>
   <div class="overlay">
     <div class="container">
       <div class="row">

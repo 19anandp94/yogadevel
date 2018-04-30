@@ -5,7 +5,7 @@
  * @package yoga
  */
 get_header(); ?>
-<div class="yoga-breadcrumb-section">
+<div class="yoga-breadcrumb-section" id="header">
     <div class="overlay">
       <div class="container">
         <div class="row">
