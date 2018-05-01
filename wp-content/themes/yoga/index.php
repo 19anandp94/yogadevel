@@ -17,7 +17,6 @@ get_header(); ?>
 <main id="content">
   <div class="container">
     
-<?php get_header(); ?>
 
 <br>
 

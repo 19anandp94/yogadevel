@@ -21,6 +21,7 @@
   <!--==================== TOP BAR ====================-->
    <?php 
 $yoga_topbar_enable = get_theme_mod('yoga_topbar_enable','true');
+
 if($yoga_topbar_enable !='false')
 { ?>
    <div class="yoga-head-detail hidden-xs hidden-sm">
@@ -41,6 +42,7 @@ if($yoga_topbar_enable !='false')
           <li> <?php if( class_exists('woocommerce')) { ?><a href="<?php echo esc_url(WC()->cart->get_cart_url()); ?>" title="<?php esc_attr_e( 'View your shopping cart','yoga' ); ?>" class="yoga-cart"> <i class="fa fa-shopping-bag"></i><span class="yoga-cart-count"> <span class="yoga-cart-item"><?php echo wp_kses_data( sprintf( _n( '%d', '%d', WC()->cart->get_cart_contents_count(), 'yoga' ), WC()->cart->get_cart_contents_count() ) ); ?> </span>  </span></a> <?php } ?> </li>
         </ul>
         <?php if ( has_nav_menu( 'social' ) ) : ?>
+
           <nav class="yoga-social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'yoga' ); ?>">
             <?php
               wp_nav_menu( array(
@@ -59,6 +61,7 @@ if($yoga_topbar_enable !='false')
   </div>
   <div class="clearfix"></div>
   <?php } ?>
+
   <div class="yoga-main-nav">
     <nav class="navbar navbar-default navbar-wp">
       <div class="container"> 
@@ -86,4 +89,34 @@ if($yoga_topbar_enable !='false')
       </div>
     </nav>
   </div>
+   <script>
+    jQuery(function($){
+      $('#navbar-wp').data('size','big');
+    });
+
+    jQuery(window).scroll(function($){
+      if(jQuery(document).scrollTop() > 0)
+      {
+        if(jQuery('#navbar-wp').data('size') == 'big')
+        {  
+          jQuery('#navbar-wp').data('size','small');
+          jQuery('#navbar-wp').stop().animate({
+            height:'40px'
+          },600);
+        }
+      }
+      else
+      {
+        if(jQuery('#navbar-wp').data('size') == 'small')
+        {
+          jQuery('#navbar-wp').data('size','big');
+          jQuery('#navbar-wp').stop().animate({
+            height:'100px'
+          },600);
+        }  
+      }
+    });
+   </script>
+   <?php  if ( function_exists( 'soliloquy' ) ) { soliloquy( '110' ); } ?>
+
 </header>
