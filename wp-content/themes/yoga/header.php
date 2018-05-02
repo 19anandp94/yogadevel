@@ -82,7 +82,7 @@ if($yoga_topbar_enable !='false')
         <!-- /End Navbar Header --> 
         
         <!-- Navigation -->
-        <div class="collapse navbar-collapse" id="navbar-wp">
+        <div class="collapse navbar-collapse" id="navbar-wp" data-size = "big" >
           <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'menu_class' => 'nav navbar-nav navbar-right', 'fallback_cb' => 'yoga_custom_navwalker::fallback' , 'walker' => new yoga_custom_navwalker() ) ); ?>
         </div>
         <!-- /Navigation --> 
