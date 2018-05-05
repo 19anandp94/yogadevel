@@ -60,6 +60,7 @@ li.Social_Widget a {
 .socialmedia-buttons img {
 	vertical-align: middle;
 	margin-bottom: 3px;
+	margin-left: 900px;
 }
 .socialmedia-buttons img.fade:hover {
 	opacity: 1 !important;
