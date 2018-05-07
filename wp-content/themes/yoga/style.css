@@ -2146,7 +2146,7 @@ footer .yoga-widget h6 {
     padding-bottom: 12px;
     position: relative;
     text-transform: capitalize;
-    margin-left: 900px;
+    margin-left: 0px !important;
 }
 footer .yoga-widget ul {
 	padding: 0;
@@ -2650,4 +2650,10 @@ footer .yoga-widget .woocommerce ul.cart_list li img, footer .yoga-widget .wooco
 .text-center-xs {
 	text-align: center;
 }
+}
+.socialmedia-buttons{
+	    margin-right: 0px !important;
+}
+.socialmedia-buttons img {
+    margin-left: 0px !important;
 }
