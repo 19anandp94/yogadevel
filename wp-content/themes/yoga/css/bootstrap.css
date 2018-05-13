@@ -4545,6 +4545,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-right {
      float: right !important; margin-right: 58px; margin-top: 22px !important; 
   }
+  #nav_menu-3{
+    display: none;
+  }
   .navbar-right ~ .navbar-right {
     margin-right: 0;
   }
