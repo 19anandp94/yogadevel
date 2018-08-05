@@ -22,6 +22,10 @@ Text Domain: yoga
   .navbar-nav > li > a {
     padding-top: 15px !important;
  }
+ body,html{
+      overflow-x: hidden !important;
+
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -31,6 +35,10 @@ Text Domain: yoga
   .navbar-nav > li > a {
     padding-top: 15px !important;
  }
+ body,html{
+      overflow-x: hidden !important;
+
+  }
 }
 
 @media (min-width: 768px){
