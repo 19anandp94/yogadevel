@@ -15,6 +15,30 @@ Text Domain: yoga
 	1. Header
 =========================================
 -----------------------------------------*/
+@media only screen and (max-width: 600px) {
+  .custom-logo {
+    display: none !important;
+  }
+  .navbar-nav > li > a {
+    padding-top: 15px !important;
+ }
+}
+
+@media only screen and (max-width: 768px) {
+  .custom-logo {
+    display: none !important;
+  }
+  .navbar-nav > li > a {
+    padding-top: 15px !important;
+ }
+}
+
+@media (min-width: 768px){
+.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
+    margin-top: -8px !important;
+    margin-right: 0;
+    margin-left: -63px !important;
+}
 .yoga-trhead {
 	position: absolute;
 	right: 0;
