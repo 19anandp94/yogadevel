@@ -24,6 +24,13 @@ custom.css and it will override the style in this file. You have been warned! :)
 /*-----------------------------------------------------------------------------------*/
 /*	Visual Composer Styles
 /*-----------------------------------------------------------------------------------*/
+.mb30 img {
+	height: 300px !important;
+}
+.wp-post-image img{
+	height: 300px !important;
+}
+
 .vc_row {
 	max-width: 1170px;
 	margin: 0 auto;

@@ -1,5 +1,9 @@
 <?php get_header(); ?>
-
+<style type="text/css">
+	.attatchment img{
+	height: 300px !important;
+}
+</style>
 <section>
 	<div class="container">
 		<div class="row">
