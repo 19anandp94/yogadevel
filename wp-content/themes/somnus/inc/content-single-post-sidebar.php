@@ -1,6 +1,6 @@
 <div class="col-sm-12 pt64 pb64 bg-secondary">
 		
-		<div class="col-sm-8">
+		<div class="col-sm-8  col-md-offset-2">
 			
 			<?php the_title('<h2 class="uppercase text-center mb64 mb-xs-24">', '</h2>'); ?>
 			
